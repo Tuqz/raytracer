@@ -1,2 +1,2 @@
-: foreach *.c |> gcc -c %f -o %o |> %B.o
-: *.o |> gcc %f -o %o -lm |> raytracer
+: foreach *.c |> cc -c %f -o %o -Wall --std=c99 -O3 -ffast-math |> %B.o
+: *.o |> cc %f -o %o -lm -lSDL -O3 -ffast-math |> raytracer

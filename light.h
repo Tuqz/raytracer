@@ -3,5 +3,7 @@
 
 struct Light {
 	Vector pos;
-	double intensity, radius;
+	double radius;
 };
+
+typedef struct Light Light;
